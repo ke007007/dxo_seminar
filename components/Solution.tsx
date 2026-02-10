@@ -22,7 +22,7 @@ export const Solution: React.FC = () => {
               <span className="absolute -top-8 -left-8 text-6xl text-brand-gray/10 font-serif">“</span>
               <p className="text-brand-black/80 leading-[2.2] text-lg font-medium text-justify font-feature-settings">
                 多くの組織改革が失敗するのは、古いOS（ピラミッド型）の上に新しいアプリ（制度）を載せようとするからかもしれません。<br/><br/>
-                本講座では、経営の重圧を「みんな化」する具体的なプロセスを体験します。「手法」の学習ではなく、まだ見ぬ「自律分散の世界観」を純粋に体験し、その手触りを感じていただくための場です。
+                本ワークショップでは、重圧のかかる経営を「みんな化」する具体的プロセスが体験できます。「手法」の学習ではなく、まだ見ぬ「自律分散の世界観」に手触り感が持てる体験をすることで、自社での「みんな化」にイメージを持てるようになるための場です。
               </p>
            </div>
         </div>

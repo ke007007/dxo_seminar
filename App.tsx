@@ -18,7 +18,7 @@ function App() {
             手放す経営ラボラトリー
           </div>
           <button 
-            onClick={() => document.getElementById('overview')?.scrollIntoView({ behavior: 'smooth' })} 
+            onClick={() => window.location.href = 'https://share-na2.hsforms.com/1UjhNY43cTzuJ0VCfFJN2sg3d3k5'} 
             className="text-xs font-bold bg-brand-yellow text-brand-black px-6 py-3 rounded-full hover:bg-[#E6C200] shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:scale-95"
           >
             ENTRY
@@ -44,8 +44,8 @@ function App() {
              <p className="text-xs text-gray-500">© 2024 TEBANASU LAB. All Rights Reserved.</p>
           </div>
           <div className="flex gap-6 mt-8 md:mt-0 justify-center md:justify-end">
-             <a href="#" className="text-xs text-gray-400 hover:text-white transition-colors">運営会社</a>
-             <a href="#" className="text-xs text-gray-400 hover:text-white transition-colors">お問い合わせ</a>
+             <a href="https://tebanasu-lab.com/" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 hover:text-white transition-colors">運営会社</a>
+             <a href="https://tebanasu-lab.com/contact201911" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 hover:text-white transition-colors">お問い合わせ</a>
           </div>
         </div>
       </footer>

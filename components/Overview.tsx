@@ -8,55 +8,63 @@ export const Overview: React.FC = () => {
       <div className="max-w-4xl mx-auto space-y-24">
         
         {/* 開催概要 Block - No longer tilted */}
-        <div className="bg-white shadow-xl shadow-brand-black/5 overflow-hidden border border-brand-black/5 rounded-2xl">
-          <div className="p-10 md:p-12 border-b-2 border-dashed border-brand-black/10 bg-brand-black text-white relative">
-              <span className="text-[12px] font-bold tracking-[0.2em] text-white/50 uppercase mb-4 block text-center font-hand">Outline</span>
-              <h2 className="text-2xl md:text-3xl font-black text-center font-feature-settings">開催概要</h2>
-              {/* Tape effect */}
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-brand-yellow/30 rotate-2 opacity-80 backdrop-blur-sm"></div>
-          </div>
+        <div>
+            <div className="bg-white shadow-xl shadow-brand-black/5 overflow-hidden border border-brand-black/5 rounded-2xl relative z-10">
+            <div className="p-10 md:p-12 border-b-2 border-dashed border-brand-black/10 bg-brand-black text-white relative">
+                <span className="text-[12px] font-bold tracking-[0.2em] text-white/50 uppercase mb-4 block text-center font-hand">Outline</span>
+                <h2 className="text-2xl md:text-3xl font-black text-center font-feature-settings">開催概要</h2>
+                {/* Tape effect */}
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-brand-yellow/30 rotate-2 opacity-80 backdrop-blur-sm"></div>
+            </div>
 
-          <div className="divide-y divide-brand-black/5">
-             {[
-                { label: "開催形式", value: "オンライン（Zoom）" },
-                { 
-                  label: "開催時期", 
-                  value: (
-                    <div className="flex flex-col space-y-3 py-1">
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
-                          <span className="font-bold min-w-[120px]">A日程：4月5日（日）</span>
-                          <span>13:00-18:00</span>
+            <div className="divide-y divide-brand-black/5">
+                {[
+                    { label: "開催形式", value: "オンライン（Zoom）" },
+                    { 
+                    label: "開催時期", 
+                    value: (
+                        <div className="flex flex-col space-y-3 py-1">
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
+                            <span className="font-bold min-w-[120px]">A日程：4月5日（日）</span>
+                            <span>13:00-18:00</span>
+                            </div>
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
+                            <span className="font-bold min-w-[120px]">B日程：4月18日（土）</span>
+                            <span>10:00-16:00 <span className="text-xs font-normal text-brand-gray ml-1">※昼休憩含む</span></span>
+                            </div>
                         </div>
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
-                          <span className="font-bold min-w-[120px]">B日程：4月18日（土）</span>
-                          <span>10:00-16:00 <span className="text-xs font-normal text-brand-gray ml-1">※昼休憩含む</span></span>
-                        </div>
+                    ) 
+                    },
+                    { label: "時間", value: "5時間 ※昼休憩含む場合は6時間" },
+                    { label: "動画", value: "1時間×2本" },
+                    { label: "定員", value: "6名/チーム" },
+                    { label: "対象者", value: "経営者・自立分散組織を体感したい方" },
+                ].map((row, i) => (
+                    <div key={i} className="flex flex-col md:flex-row px-8 md:px-16 py-6 md:py-8 hover:bg-brand-light transition-colors duration-200 group">
+                    <div className="w-full md:w-1/3 text-xs font-bold text-brand-gray tracking-[0.15em] uppercase mb-2 md:mb-0 pt-1 group-hover:text-brand-black transition-colors">{row.label}</div>
+                    <div className="w-full md:w-2/3 text-base font-bold text-brand-black font-feature-settings leading-relaxed">{row.value}</div>
                     </div>
-                  ) 
-                },
-                { label: "動画", value: "1時間×2本" },
-                { label: "定員", value: "6名×4チーム（1期あたり）" },
-             ].map((row, i) => (
-                <div key={i} className="flex flex-col md:flex-row px-8 md:px-16 py-6 md:py-8 hover:bg-brand-light transition-colors duration-200 group">
-                   <div className="w-full md:w-1/3 text-xs font-bold text-brand-gray tracking-[0.15em] uppercase mb-2 md:mb-0 pt-1 group-hover:text-brand-black transition-colors">{row.label}</div>
-                   <div className="w-full md:w-2/3 text-base font-bold text-brand-black font-feature-settings leading-relaxed">{row.value}</div>
+                ))}
+                
+                <div className="flex flex-col md:flex-row px-8 md:px-16 py-10 bg-brand-yellow/5 items-center relative">
+                    <div className="w-full md:w-1/3 text-xs font-bold text-brand-black tracking-[0.15em] uppercase mb-2 md:mb-0">価格</div>
+                    <div className="w-full md:w-2/3 flex items-baseline relative z-10">
+                    <span className="text-4xl font-black tracking-tight text-brand-black relative">
+                        38,500
+                        {/* Hand drawn highlight positioned inside */}
+                        <svg className="absolute bottom-1 -left-2 w-[120%] h-8 -z-10 pointer-events-none" viewBox="0 0 200 60" preserveAspectRatio="none">
+                            <path d="M0,50 Q100,60 200,50" fill="none" stroke="#FFD500" strokeWidth="20" opacity="0.4" strokeLinecap="round" />
+                        </svg>
+                    </span>
+                    <span className="text-sm font-bold ml-3 text-brand-black/70">円（税込）</span>
+                    </div>
                 </div>
-             ))}
-             
-             <div className="flex flex-col md:flex-row px-8 md:px-16 py-10 bg-brand-yellow/5 items-center relative">
-                <div className="w-full md:w-1/3 text-xs font-bold text-brand-black tracking-[0.15em] uppercase mb-2 md:mb-0">価格</div>
-                <div className="w-full md:w-2/3 flex items-baseline relative z-10">
-                   <span className="text-4xl font-black tracking-tight text-brand-black relative">
-                      38,500
-                      {/* Hand drawn highlight positioned inside */}
-                      <svg className="absolute bottom-1 -left-2 w-[120%] h-8 -z-10 pointer-events-none" viewBox="0 0 200 60" preserveAspectRatio="none">
-                         <path d="M0,50 Q100,60 200,50" fill="none" stroke="#FFD500" strokeWidth="20" opacity="0.4" strokeLinecap="round" />
-                      </svg>
-                   </span>
-                   <span className="text-sm font-bold ml-3 text-brand-black/70">円（税込）</span>
-                </div>
-             </div>
-          </div>
+            </div>
+            </div>
+            {/* Annotation moved outside */}
+            <div className="mt-4 px-4 text-xs text-brand-gray text-center font-medium opacity-80">
+               ※ワークショップは定員6名（お申込み先着順）で、最低必要人数4名が集まったら開催決定となります
+            </div>
         </div>
 
         {/* 参加にあたってのお願い Block */}
@@ -104,7 +112,7 @@ export const Overview: React.FC = () => {
                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-white/40 rotate-1 shadow-sm z-10 backdrop-blur-sm border border-white/20"></div>
                    <div className="p-2 bg-white h-full w-full">
                         <img 
-                            src="https://watanabeshoten-llc.com/tmp/k/ws1.jpg" 
+                            src="https://watanabeshoten-llc.com/tmp/k/ws4.jpg" 
                             alt="Workshop Scene 1" 
                             className="w-full h-full object-cover transition-all duration-700" 
                         />

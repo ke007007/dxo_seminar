@@ -9,14 +9,13 @@ export const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           
           <div className="lg:col-span-7 animate-fade-in order-2 lg:order-1">
-             <div className="flex items-center space-x-4 mb-8">
-                <span className="h-[2px] w-12 bg-brand-black rounded-full transform -rotate-1"></span>
+             <div className="mb-6">
                 <span className="text-[12px] md:text-xs font-bold tracking-[0.2em] uppercase text-brand-gray font-hand">Premium Workshop</span>
              </div>
              
              {/* Main Title: Product Name */}
              <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-black text-brand-black leading-[1.05] mb-6 tracking-tight font-feature-settings relative">
-               自律分散組織<br className="block md:hidden"/>
+               自律分散組織<br />
                1day体験会
              </h1>
 
@@ -28,7 +27,7 @@ export const Hero: React.FC = () => {
                  <span className="absolute bottom-2 left-0 w-full h-3 bg-brand-yellow/40 -z-10 -rotate-1 rounded-sm"></span>
                </span>
                を身体に刻む、<br className="md:hidden"/>
-               社長のための6時間。
+               社長のための5時間。
              </p>
 
              {/* Description: Logical Explanation */}
@@ -39,7 +38,7 @@ export const Hero: React.FC = () => {
                  どの組織にも実装可能な「技術」です。
                </p>
                <p className="text-sm md:text-base text-brand-black/70 font-medium leading-loose text-justify mt-4 font-feature-settings">
-                 3万人が手にした自律分散型組織デザインプログラムDXOを開発した、<br className="hidden lg:block"/>
+                 3万人が手にした進化型組織デザインプログラムDXOを開発した、<br className="hidden lg:block"/>
                  手放す経営ラボラトリーが提供する「自律分散の真髄」を、ワークショップで体感してください。
                </p>
              </div>
@@ -47,7 +46,7 @@ export const Hero: React.FC = () => {
              <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                {/* Updated CTA Button to Secondary (Yellow) for better visibility */}
                <div className="relative group">
-                  <Button variant="secondary" onClick={() => document.getElementById('overview')?.scrollIntoView({ behavior: 'smooth' })} className="w-full sm:w-auto px-10 relative z-10">
+                  <Button variant="secondary" onClick={() => window.location.href = 'https://share-na2.hsforms.com/1UjhNY43cTzuJ0VCfFJN2sg3d3k5'} className="w-full sm:w-auto px-10 relative z-10">
                     自律分散の世界を体験する
                   </Button>
                </div>

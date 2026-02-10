@@ -10,8 +10,8 @@ export const PainPoints: React.FC = () => {
             <span className="text-lg font-bold tracking-[0.2em] text-brand-gray uppercase mb-6 block font-hand transform -rotate-2">The Struggle</span>
             <div className="relative">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.2] mb-10 font-feature-settings text-brand-black relative z-10">
-                「やり尽くしたはずなのに、<br className="md:hidden"/>
-                何かがおかしい」
+                「あらゆる方法を試したけれど、<br className="md:hidden"/>
+                何かが違う」
                 </h2>
             </div>
             
