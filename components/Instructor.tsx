@@ -36,7 +36,7 @@ export const Instructor: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start mb-24">
             
             {/* Desktop Image Column (Hidden on Mobile) */}
-            <div className="hidden lg:block lg:col-span-5 relative order-2 lg:order-1 sticky top-32">
+            <div className="hidden lg:block lg:col-span-5 relative order-2 lg:order-1">
                 
                 {/* Organic Photo Frame */}
                 <div className="aspect-[3/4] bg-brand-light relative overflow-hidden shadow-xl transform rotate-1" style={{ borderRadius: '255px 15px 225px 15px / 15px 225px 15px 255px' }}>
