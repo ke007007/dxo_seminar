@@ -49,7 +49,11 @@ export const PainPoints: React.FC = () => {
                 <span className="text-3xl font-bold text-brand-black/20 font-hand mt-1 transform -rotate-6 inline-block">#{index + 1}</span>
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold mb-6 text-brand-black font-feature-settings group-hover:text-brand-tealDark transition-colors duration-300">
-                    {item.title}
+                    <span className="relative inline-block">
+                        <span className="relative z-10">{item.title}</span>
+                        {/* Marker Effect - Fixed: Removed negative z-index, adjusted opacity/height */}
+                        <span className="absolute bottom-1 left-0 w-full h-4 bg-brand-yellow/60 -rotate-1 rounded-sm pointer-events-none"></span>
+                    </span>
                   </h3>
                   <p className="text-brand-black/70 leading-[2] text-sm md:text-base text-justify font-medium font-feature-settings">
                     {item.desc}
