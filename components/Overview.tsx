@@ -78,11 +78,11 @@ export const Overview: React.FC = () => {
              
              <div className="grid gap-4">
                 {[
-                    "体験会は参加型ワークショップのため、体験ではなくDXOの内容を知りたい方はこちらの動画をご利用ください",
+                    <span key="req1">体験会は参加型ワークショップのため、体験ではなくDXOの内容を知りたい方は<a href="https://tebanasu-lab-5649989.hs-sites-na2.com/dxoinstaller-0-0-0-0-0" target="_blank" rel="noopener noreferrer" className="text-brand-teal underline hover:text-brand-tealDark mx-1">こちらの動画</a>をご利用ください</span>,
                     "全時間に参加できる（5時間を通じ体感できるプログラムのため、途中参加・途中退室はできません）",
                     "パソコン（安定したWi-Fi環境）で参加できる\n（オンラインホワイトボードを利用して進行しますのでスマホやタブレット端末での参加は不可となります）",
                     "参加者とのコミュニケーションがとれる方\n（知識を得るための講義や研修ではありません、体験の場なので顔を出して対話が必要となります）（教える、教えられるの関係ではなく一緒に体験の場を作るという意識でご参加下さい）"
-                ].map((text, idx) => (
+                ].map((content, idx) => (
                     <div key={idx} className="flex items-start gap-5 p-6 md:p-8 bg-white hand-drawn-box border border-brand-black/5 hover:border-brand-black/30 transition-all duration-300 shadow-sm hover:shadow-md group">
                         <div className="mt-1 flex-shrink-0 text-brand-black group-hover:scale-110 transition-transform duration-300">
                             {/* Apple Checkbox Icon */}
@@ -90,7 +90,7 @@ export const Overview: React.FC = () => {
                                 <Apple size={22} fill="#FFD500" className="drop-shadow-sm" />
                             </div>
                         </div>
-                        <p className="text-sm md:text-base font-medium leading-loose text-brand-black/80 whitespace-pre-wrap">{text}</p>
+                        <p className="text-sm md:text-base font-medium leading-loose text-brand-black/80 whitespace-pre-wrap">{content}</p>
                     </div>
                 ))}
              </div>
