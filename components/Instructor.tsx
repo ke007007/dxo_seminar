@@ -20,7 +20,7 @@ export const Instructor: React.FC = () => {
       name: "ますえ（澤田 万寿江）",
       image: "https://watanabeshoten-llc.com/tmp/k/member3.png",
       role: "手放す経営ラボラトリー研究員",
-      description: "IT、教育NPO、メーカーと様々な業種・職種を経験する中で「個人が幸せに働ける組織づくり」に関心を持つようになり、DXOに出会う。自分自身も幸せな働きかた・暮らしかたを模索しつつ、インストーラー見習い中。"
+      description: "IT、教育NPO、メーカーと様々な業種・職種を経験する中で「個人が幸せに働ける組織づくり」に関心を持つようになり、DXOに出会う。自分自身も幸せな働きかた・暮らしかたを模索しつつ、自律分散組織を探究中。"
     },
     {
       name: "けいた（高橋 啓太）",
