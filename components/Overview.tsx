@@ -25,11 +25,11 @@ export const Overview: React.FC = () => {
                     value: (
                         <div className="flex flex-col space-y-3 py-1">
                             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
-                            <span className="font-bold min-w-[120px]">A日程：4月5日（日）</span>
+                            <span className="font-bold min-w-[120px]">Aチーム日程：4月5日（日）</span>
                             <span>13:00-18:00</span>
                             </div>
                             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
-                            <span className="font-bold min-w-[120px]">B日程：4月18日（土）</span>
+                            <span className="font-bold min-w-[120px]">Bチーム日程：4月18日（土）</span>
                             <span>10:00-16:00 <span className="text-xs font-normal text-brand-gray ml-1">※昼休憩含む</span></span>
                             </div>
                         </div>
@@ -78,6 +78,8 @@ export const Overview: React.FC = () => {
              
              <div className="grid gap-4">
                 {[
+                    "RINGO100本植樹プロジェクトにご参加いただいた方は、内容が重複しますのでご参加いただけません。",
+                    "過去に開催されたDXOワークショップ体験会の内容が凝縮されたものになっていますのでご了承ください。",
                     <span key="req1">体験会は参加型ワークショップのため、体験ではなくDXOの内容を知りたい方は<a href="https://tebanasu-lab-5649989.hs-sites-na2.com/dxoinstaller-0-0-0-0-0" target="_blank" rel="noopener noreferrer" className="text-brand-teal underline hover:text-brand-tealDark mx-1">こちらの動画</a>をご利用ください</span>,
                     "全時間に参加できる（5時間を通じ体感できるプログラムのため、途中参加・途中退室はできません）",
                     "パソコン（安定したWi-Fi環境）で参加できる\n（オンラインホワイトボードを利用して進行しますのでスマホやタブレット端末での参加は不可となります）",
