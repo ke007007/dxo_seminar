@@ -38,7 +38,7 @@ export const Overview: React.FC = () => {
                     { label: "時間", value: "5時間 ※昼休憩含む場合は6時間" },
                     { label: "動画", value: "1時間×2本" },
                     { label: "定員", value: "6名/チーム" },
-                    { label: "対象者", value: "経営者・自立分散組織を体感したい方" },
+                    { label: "対象者", value: "経営者・自律分散組織を体感したい方" },
                 ].map((row, i) => (
                     <div key={i} className="flex flex-col md:flex-row px-8 md:px-16 py-6 md:py-8 hover:bg-brand-light transition-colors duration-200 group">
                     <div className="w-full md:w-1/3 text-xs font-bold text-brand-gray tracking-[0.15em] uppercase mb-2 md:mb-0 pt-1 group-hover:text-brand-black transition-colors">{row.label}</div>
