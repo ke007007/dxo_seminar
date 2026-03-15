@@ -22,18 +22,7 @@ export const Overview: React.FC = () => {
                     { label: "開催形式", value: "オンライン（Zoom）" },
                     { 
                     label: "開催時期", 
-                    value: (
-                        <div className="flex flex-col space-y-3 py-1">
-                            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
-                            <span className="font-bold min-w-[120px]">Aチーム日程：4月5日（日）</span>
-                            <span>13:00-18:00</span>
-                            </div>
-                            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
-                            <span className="font-bold min-w-[120px]">Bチーム日程：4月18日（土）</span>
-                            <span>10:00-16:00 <span className="text-xs font-normal text-brand-gray ml-1">※昼休憩含む</span></span>
-                            </div>
-                        </div>
-                    ) 
+                    value: "開催日程 調整中"
                     },
                     { label: "時間", value: "5時間 ※昼休憩含む場合は6時間" },
                     { label: "動画", value: "1時間×2本" },
