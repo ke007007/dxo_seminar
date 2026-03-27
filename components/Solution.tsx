@@ -10,7 +10,7 @@ export const Solution: React.FC = () => {
            <div>
               <span className="text-lg font-bold tracking-[0.2em] text-brand-tealDark uppercase mb-6 block font-hand">The Solution</span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-[1.1] font-feature-settings relative">
-                「OSの入れ替え」こそが<br className="md:hidden"/>唯一の答え
+                「組織OSを入れ替える」<br className="md:hidden"/>という発想
                 {/* Hand drawn scribble */}
                 <svg className="absolute bottom-0 right-0 w-32 h-12 text-brand-yellow -z-10 opacity-50" viewBox="0 0 100 50">
                    <path d="M0,25 Q25,0 50,25 T100,25" fill="none" stroke="currentColor" strokeWidth="10" opacity="0.5" strokeLinecap="round" />
@@ -22,7 +22,7 @@ export const Solution: React.FC = () => {
               <span className="absolute -top-8 -left-8 text-6xl text-brand-gray/10 font-serif">“</span>
               <p className="text-brand-black/80 leading-[2.2] text-lg font-medium text-justify font-feature-settings">
                 多くの組織改革が失敗するのは、古いOS（ピラミッド型）の上に新しいアプリ（制度）を載せようとするからかもしれません。<br/><br/>
-                本ワークショップでは、重圧のかかる経営を「みんな化」する具体的プロセスが体験できます。「手法」の学習ではなく、まだ見ぬ「自律分散の世界観」に手触り感が持てる体験をすることで、自社での「みんな化」にイメージを持てるようになるための場です。
+                本ワークショップでは、誰か一人に重圧のかかる経営ではなく「みんなで進む」組織へ移行する具体的プロセスが体験できます。また「手法」の学習だけではなく、まだ見ぬ「自律分散の世界観」に手触り感を持てるようになります。
               </p>
            </div>
         </div>

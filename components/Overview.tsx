@@ -20,19 +20,22 @@ export const Overview: React.FC = () => {
             <div className="divide-y divide-brand-black/5">
                 {[
                     { label: "開催形式", value: "オンライン（Zoom）" },
-                    { 
-                    label: "開催時期", 
+                    {
+                    label: "開催時期",
                     value: (
                         <div className="flex flex-col space-y-1">
+                            <span>4月26日（日）13:00-18:00</span>
+                            {/* 日程調整中に戻す場合は上の行をコメントアウトし、下の2行のコメントを外す
                             <span>開催日程 調整中</span>
                             <span className="text-xs font-normal text-brand-gray">※参加希望の方は申込formより登録下さい。<br />　次回日程が決定次第ご連絡させていただきます。</span>
+                            */}
                         </div>
                     )
                     },
                     { label: "時間", value: "5時間 ※昼休憩含む場合は6時間" },
                     { label: "動画", value: "1時間×2本" },
                     { label: "定員", value: "6名/チーム" },
-                    { label: "対象者", value: "経営者・自律分散組織を体感したい方" },
+                    { label: "対象者", value: "経営者・リーダー・自律分散組織を体感したい方どなたでも" },
                 ].map((row, i) => (
                     <div key={i} className="flex flex-col md:flex-row px-8 md:px-16 py-6 md:py-8 hover:bg-brand-light transition-colors duration-200 group">
                     <div className="w-full md:w-1/3 text-xs font-bold text-brand-gray tracking-[0.15em] uppercase mb-2 md:mb-0 pt-1 group-hover:text-brand-black transition-colors">{row.label}</div>

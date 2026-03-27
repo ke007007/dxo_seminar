@@ -24,7 +24,7 @@ export const Closing: React.FC = () => {
                 </p>
                 
                 <div className="py-8 space-y-6 font-bold text-white text-lg md:text-xl border-t border-b border-white/10 my-10 bg-white/5 -mx-8 md:-mx-16 px-8 md:px-16">
-                    <p className="font-feature-settings">「社長が決めないほうが、<br className="md:hidden"/>思った以上の結果を出せるかもしれない」</p>
+                    <p className="font-feature-settings">「トップや固定された人だけで決めないほうが、<br className="md:hidden"/>思った以上の結果を出せるかもしれない」</p>
                     <p className="font-feature-settings">「情報を開示してもハレーションを起こさず、<br className="md:hidden"/>なんとかする方法をみんなで考え始めるかもしれない」</p>
                 </div>
 

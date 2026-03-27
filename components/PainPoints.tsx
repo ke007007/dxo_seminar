@@ -10,8 +10,8 @@ export const PainPoints: React.FC = () => {
             <span className="text-lg font-bold tracking-[0.2em] text-brand-gray uppercase mb-6 block font-hand transform -rotate-2">The Struggle</span>
             <div className="relative">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.2] mb-10 font-feature-settings text-brand-black relative z-10">
-                「あらゆる方法を試したけれど、<br className="md:hidden"/>
-                何かが違う」
+                「このままの組織で、<br className="md:hidden"/>
+                大丈夫だろうか？」
                 </h2>
             </div>
             
@@ -19,11 +19,11 @@ export const PainPoints: React.FC = () => {
             <div className="bg-white p-6 shadow-lg transform rotate-1 border border-gray-100 hand-drawn-box relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-brand-yellow/20 rotate-1"></div>
                 <p className="text-brand-gray leading-loose font-medium text-lg font-feature-settings">
-                そう感じているあなたへ。<br/><br/>
-                特に先代から組織を引き継いだ<br className="hidden md:block"/>
-                2代目・3代目経営者の皆様は、<br className="hidden md:block"/>
-                人一倍の責任感で組織に<br className="hidden md:block"/>
-                向き合ってこられたはずです。
+                変化の大きい現代。<br/>
+                今後、これまでの組織運営では、うまく行かないのではないか？<br/><br/>
+                デジタル・AI化も進み、若手社員の考え方もひと昔前とは違ってきている現代。<br/>
+                そんな中で「今のやり方でこの先10年、やっていけるのか？」<br/>
+                そう感じている、経営者・リーダー、組織の皆さんへ。
                 </p>
             </div>
           </div>
@@ -33,15 +33,15 @@ export const PainPoints: React.FC = () => {
           {[
             {
               title: "あらゆる「正解」を試してきた",
-              desc: "有名な経営塾に通い、最新の評価制度を導入し、1on1や心理的安全性も学んだ。先代が築いた基盤を守りつつ、さらに進化させようと必死に「打ち手」を繰り出してきた。"
+              desc: "経営やマネジメント手法を学び、ビジネス書を読み、これまで世間で「正解」と言われてきたものを片っ端から試してきて、でもしっくりきていない。"
             },
             {
               title: "業績は悪くない、でも「重い」",
-              desc: "数字は安定している。社員も真面目に働いてくれている。しかし、組織のどこかに「詰まり」を感じ、自分が指示を出さないと物事が停滞してしまう。結局、自分が一番働いているのではないか？という疑問が消えない。"
+              desc: "数字は安定している。社員もみんな真面目に働いている。でも、組織のどこかに「詰まり」を感じる。もっと一人ひとりの可能性を活かして、動けるのでは？"
             },
             {
               title: "「いい会社」という仮面の下の閉塞感",
-              desc: "外から見れば問題のない組織。けれど、社員が本当に幸せそうか、自ら意志を持って躍動しているか、と問われると胸を張れない。このままの延長線上に、自分の理想とする未来があるのか見えない。"
+              desc: "外から見れば、問題のない組織かもしれない。\nけれど、社員は本当に幸せなのだろうか？ 自ら意志を持って働いているのだろうか？"
             }
           ].map((item, index) => (
             <div key={index} className="group border-t-2 border-brand-black/5 pt-8 hover:border-brand-black/20 transition-all duration-500">
@@ -67,7 +67,7 @@ export const PainPoints: React.FC = () => {
 
       <div className="mt-32 pt-20 border-t border-brand-black/5 text-center max-w-4xl mx-auto relative">
         <h3 className="text-2xl md:text-3xl font-bold mb-8 font-feature-settings leading-snug relative z-10">
-          悪いのは、あなたの能力でも、<br className="md:hidden"/>社員の意識でもありません。
+          悪いのは、経営者やリーダーの能力でも、<br className="md:hidden"/>社員の意識でもありません。
         </h3>
         
         <p className="text-base md:text-lg leading-loose font-medium text-brand-gray mb-12 max-w-2xl mx-auto">

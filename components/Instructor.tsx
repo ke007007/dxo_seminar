@@ -79,8 +79,8 @@ export const Instructor: React.FC = () => {
                     <div className="bg-brand-light p-8 md:p-10 relative hand-drawn-box border border-brand-black/5">
                         <div className="absolute -top-3 left-10 bg-brand-yellow/30 px-3 py-1 text-[10px] font-bold font-hand transform -rotate-2">PROFILE</div>
                         <p className="text-brand-black/80 text-sm leading-loose font-medium text-justify font-feature-settings">
-                            オリジナル化粧品の製造販売を行う会社を経営し、オリジナル美容メソッドと共に世界7カ国へ展開するビジネスを構築。<br/><br/>
-                            その後 「人が人らしく働ける」を職場環境作りに関心を持ち、ティール組織を学び、手放す経営ラボラトリーに研究員として参加。様々な組織へ実施に訪問調査し、これからの時代の組織の在り方を探究。これまで学んできた、マーケティング、コーチング、NVC、チームビルディングの考えを融合させ、既存の組織を自律分散的な組織へと移行させるプログラム「DXO（ディクソー）」を開発。商社や病院、サービス業など、年間100組織以上の自律分散的な組織開発に伴走している。
+                            誰もが感情を表現できるテーマパークを作る夢を抱き、広告代理店で遊園地などの企画開発に従事。独立してオリジナル化粧品事業で資金調達を試みるも、詐欺などで人間不信に陥る。一時引きこもり、ネット販売で生計を立てる日々を送る。<br/><br/>
+                            そんな中、書籍「ティール組織」で、誰もが自分の感情を解放して働ける組織があることに感銘を受け、自律分散的な組織のあり方を探求。現在は株式会社手放す経営ラボラトリーの取締役として、誰もが感情表現できる組織を作るプログラムDXO（ディクソー）を開発し、年間100以上のテーマパークのような組織作りを伴走している。
                         </p>
                     </div>
 
@@ -97,8 +97,7 @@ export const Instructor: React.FC = () => {
                         
                         <div className="bg-white border-l-4 border-brand-yellow pl-6 py-2">
                             <p className="text-brand-black/80 leading-[2.2] text-base font-medium font-feature-settings italic">
-                                自律分散組織はメンバーの意識レベルなどは関係なく、組織構造を整えることで必ず実現できます。その構造をどんな会社でも活用できる「技術」に落とし込んだものがDXOです。<br/><br/>
-                                「技術」は自転車に乗ることのように、頭で理解するよりも実際に体験する方が早く感覚がつかめますので、まずは気軽にご参加いただけると嬉しいです。
+                                自律分散組織はメンバーの意識レベルなどは関係なく、組織構造を整えることで必ず実現できます。その構造をどんな会社でも活用できる「技術」に落とし込んだものがDXOです。「技術」は自転車に乗ることのように、頭で理解するよりも実際に体験する方が早く感覚がつかめますので、まずは気軽にご参加いただけると嬉しいです。
                             </p>
                         </div>
                     </div>
@@ -111,7 +110,10 @@ export const Instructor: React.FC = () => {
         <div className="pt-16 md:pt-24 border-t border-brand-black/5 mt-12 md:mt-16">
             <div className="text-center mb-16">
                 <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gray mb-3 block font-hand">Support Member</span>
-                <h3 className="text-2xl md:text-3xl font-black text-brand-black font-feature-settings">DXO運営チーム</h3>
+                <h3 className="text-2xl md:text-3xl font-black text-brand-black font-feature-settings mb-6">DXO運営チーム</h3>
+                <p className="text-sm md:text-base text-brand-black/70 font-medium leading-loose max-w-2xl mx-auto font-feature-settings">
+                    年間100本以上の「RINGOプロセス」を回し、現場の変容に立ち会ってきた専門チームが、参加者同士の響き合いをサポートします。
+                </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">

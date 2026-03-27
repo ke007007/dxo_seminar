@@ -22,12 +22,12 @@ export const Hero: React.FC = () => {
              {/* Sub Title: Emotional Benefit */}
              <p className="text-xl md:text-2xl lg:text-3xl font-bold text-brand-black/90 leading-tight mb-8 font-feature-settings lg:whitespace-nowrap relative z-10">
                <span className="relative inline-block mb-1 md:mb-0 mr-1">
-                 <span className="relative z-10">「経営の手放し方」</span>
+                 <span className="relative z-10">ひとりの想いから「みんなで進む」へ</span>
                  {/* Light yellow underline */}
                  <span className="absolute bottom-2 left-0 w-full h-3 bg-brand-yellow/40 -z-10 -rotate-1 rounded-sm"></span>
                </span>
-               を身体に刻む、<br className="md:hidden"/>
-               社長のための5時間。
+               <br className="md:hidden"/>
+               「5時間」の自律分散体験
              </p>
 
              {/* Description: Logical Explanation */}

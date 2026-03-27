@@ -28,7 +28,7 @@ export const NextSteps: React.FC = () => {
                   </h3>
                   
                   <p className="text-sm md:text-base text-brand-black/70 leading-[1.8] flex-grow text-justify font-medium">
-                     ワークショップ体験後、希望者には自社で経営の「みんな化」を進めるステップについてDXO開発者乾 真人による「30分個別無料相談」を実施。現状分析、自律分散への移行のヒント、自社のOS入れ替えの可能性を共に探ります。
+                     ワークショップ体験後、希望者には自律分散組織への移行についてDXO開発者の乾真人による「30分個別無料相談」を実施。現状分析、自律分散への移行のヒント、自社のOS入れ替えの可能性を共に探ります。
                   </p>
                </div>
             </div>
@@ -51,8 +51,7 @@ export const NextSteps: React.FC = () => {
                   </h3>
                   
                   <p className="text-sm md:text-base text-brand-black/70 leading-[1.8] flex-grow text-justify font-medium">
-                     次のステップとして、自社への導入スケジュールやファシリテーションを具体的に学ぶ「自律分散組織デザイン講座」への道も用意されています。
-                     <span className="block mt-2 text-xs text-brand-gray">※DXOを活用して、社長自身が自社に導入できるまでの具体的な流れを学習します。</span>
+                     次のステップとして、自社への導入スケジュールやファシリテーションを具体的に学ぶ「自律分散組織デザイン講座」への道も用意されています。こちらはDXOを活用して、経営者やメンバー自身が、自社に導入・活用するための具体的なポイントや流れを学習します。
                   </p>
                </div>
             </div>
