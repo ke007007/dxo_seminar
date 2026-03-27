@@ -10,7 +10,7 @@ export const Solution: React.FC = () => {
            <div>
               <span className="text-lg font-bold tracking-[0.2em] text-brand-tealDark uppercase mb-6 block font-hand">The Solution</span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-[1.1] font-feature-settings relative">
-                「組織OSを入れ替える」<br className="md:hidden"/>という発想
+                「組織OSを入れ替える」という発想
                 {/* Hand drawn scribble */}
                 <svg className="absolute bottom-0 right-0 w-32 h-12 text-brand-yellow -z-10 opacity-50" viewBox="0 0 100 50">
                    <path d="M0,25 Q25,0 50,25 T100,25" fill="none" stroke="currentColor" strokeWidth="10" opacity="0.5" strokeLinecap="round" />

@@ -67,7 +67,7 @@ export const PainPoints: React.FC = () => {
 
       <div className="mt-32 pt-20 border-t border-brand-black/5 text-center max-w-4xl mx-auto relative">
         <h3 className="text-2xl md:text-3xl font-bold mb-8 font-feature-settings leading-snug relative z-10">
-          悪いのは、経営者やリーダーの能力でも、<br className="md:hidden"/>社員の意識でもありません。
+          悪いのは、経営者やリーダーの能力でも、社員の意識でもありません。
         </h3>
         
         <p className="text-base md:text-lg leading-loose font-medium text-brand-gray mb-12 max-w-2xl mx-auto">
@@ -84,7 +84,7 @@ export const PainPoints: React.FC = () => {
         <div className="inline-block px-8 py-5 md:px-12 md:py-6 bg-white shadow-xl transform hover:-translate-y-1 transition-transform duration-300 relative group hand-drawn-box border-2 border-brand-black">
             <div className="absolute top-0 left-0 w-full h-full bg-brand-yellow/10 hand-drawn-box -z-10 transform translate-x-2 translate-y-2"></div>
             <p className="font-bold text-brand-black text-sm md:text-base tracking-wide font-feature-settings">
-                この「行き詰まり」は、<br className="md:hidden"/>組織を生命体へとアップデートするための、<br className="md:hidden"/>重要なサインかもしれません。
+                この「行き詰まり」は、組織を生命体へとアップデートするための、重要なサインかもしれません。
             </p>
             {/* Hand drawn sparkle */}
             <svg className="absolute -top-6 -right-6 w-12 h-12 text-brand-yellow animate-wiggle" viewBox="0 0 50 50">

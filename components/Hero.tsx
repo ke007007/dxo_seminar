@@ -3,7 +3,7 @@ import { Button } from './Button';
 
 export const Hero: React.FC = () => {
   return (
-    <div className="relative min-h-screen flex items-center bg-white overflow-hidden pt-24 md:pt-0">
+    <div className="relative min-h-screen flex items-center bg-white overflow-hidden pt-24 pb-16 md:pt-0 md:pb-0">
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
@@ -21,13 +21,18 @@ export const Hero: React.FC = () => {
 
              {/* Sub Title: Emotional Benefit */}
              <p className="text-xl md:text-2xl lg:text-3xl font-bold text-brand-black/90 leading-tight mb-8 font-feature-settings lg:whitespace-nowrap relative z-10">
-               <span className="relative inline-block mb-1 md:mb-0 mr-1">
+               {/* スマホ用: 自然折り返し＋背景ハイライト */}
+               <span className="block md:hidden mb-2">
+                 <span className="bg-brand-yellow/30 px-1 -mx-1 rounded-sm">ひとりの想いから「みんなで進む」へ</span>
+               </span>
+               <span className="block md:hidden">「5時間」の自律分散体験</span>
+               {/* PC用: 既存アンダーライン（変更なし） */}
+               <span className="hidden md:inline-block relative mb-0 mr-1">
                  <span className="relative z-10">ひとりの想いから「みんなで進む」へ</span>
                  {/* Light yellow underline */}
                  <span className="absolute bottom-2 left-0 w-full h-3 bg-brand-yellow/40 -z-10 -rotate-1 rounded-sm"></span>
                </span>
-               <br className="md:hidden"/>
-               「5時間」の自律分散体験
+               <span className="hidden md:block">「5時間」の自律分散体験</span>
              </p>
 
              {/* Description: Logical Explanation */}
