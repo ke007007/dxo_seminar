@@ -18,8 +18,8 @@ export const ProgramDetails: React.FC = () => {
               {
                  step: "01",
                  category: "事前学習",
-                 title: "動画1時間×1本",
-                 desc: "「進化型組織の前提条件」と「つくり方」を事前にインプット。当日の体験を最大化します。"
+                 title: "動画約1時間×1本",
+                 desc: "「自律分散組織とは」プログラムの全体像を事前にインプット。当日の体験を最大化します。"
               },
               {
                  step: "02",
@@ -31,8 +31,8 @@ export const ProgramDetails: React.FC = () => {
               {
                  step: "03",
                  category: "事後学習",
-                 title: "動画1時間×1本",
-                 desc: "体験を自社の日常にどう落とし込むか。具体的な導入ステップを解説します。"
+                 title: "動画約30分×1本",
+                 desc: "1day体験会の内容を組織運営に落とし込むとき、必要になるポイントをお伝えします。"
               }
            ].map((item, index) => (
               <div key={index} className={`relative flex flex-col md:flex-row mb-12 md:mb-0 ${item.highlight ? 'z-10' : ''}`}>

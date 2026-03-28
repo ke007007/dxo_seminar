@@ -33,7 +33,7 @@ export const Overview: React.FC = () => {
                     )
                     },
                     { label: "時間", value: "5時間 ※昼休憩含む場合は6時間" },
-                    { label: "動画", value: "1時間×2本" },
+                    { label: "動画", value: "2本（事前動画約60分、事後動画約30分）" },
                     { label: "定員", value: "6名/チーム" },
                     { label: "対象者", value: "経営者・リーダー・自律分散組織を体感したい方どなたでも" },
                 ].map((row, i) => (
