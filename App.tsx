@@ -4,6 +4,7 @@ import { PainPoints } from './components/PainPoints';
 import { Solution } from './components/Solution';
 import { ProgramDetails } from './components/ProgramDetails';
 import { Instructor } from './components/Instructor';
+import { Testimonials } from './components/Testimonials';
 import { Overview } from './components/Overview';
 import { NextSteps } from './components/NextSteps';
 import { Closing } from './components/Closing';
@@ -32,6 +33,7 @@ function App() {
         <Solution />
         <ProgramDetails />
         <Instructor />
+        <Testimonials />
         <Overview />
         <NextSteps />
         <Closing />
