@@ -75,3 +75,33 @@ https://share-na2.hsforms.com/1UjhNY43cTzuJ0VCfFJN2sg3d3k5
 - 既存ファイルを編集する前に必ず確認をとる
 - 変更後は必ず開発サーバーで表示を確認してからpushする
 - コミットメッセージは `fix:` や `feat:` などのプレフィックスをつける
+
+---
+
+## DXO公式HP（https://dxo-official.vercel.app）連携メタタグ
+
+このプロジェクトの `index.html` の `<head>` には、DXO公式HPの「現在募集中のイベント・セミナー」
+セクションで本LPを自動取得・カード表示するためのメタタグ（OGP / JSON-LD）が含まれています。
+
+### 仕組み
+DXO公式HP → Apps Script → Vercel proxy → 本LPのHTML取得 → OGP/JSON-LD抽出 → カード描画
+
+本LPは React SPA のため、サーバーが返すHTMLには `<head>` の情報しか含まれません。
+そのため OGP / JSON-LD を `<head>` に明示的に書いておく必要があります。
+
+### 連携先
+- DXO公式HP リポジトリ: https://github.com/ke007007/dxo-official
+- Apps Script プロジェクト: https://script.google.com/d/1Sqmt-KVYgTKhPrkQQEDHnfqM4qh2XdqDYCHYdfTc7IqORVhkqqBPaOSr/edit
+
+### 編集ルール
+- `<head>` 内の OGP / JSON-LD タグを **削除しないこと**（DXO公式HPでのカード表示が壊れます）
+- 開催日程を `components/Overview.tsx` で変更した場合は、`index.html` の JSON-LD の `subEvent` 内の
+  `startDate` / `endDate` も合わせて更新すること（同期忘れに注意）
+- `og:image` / `og:title` / `og:description` を変更する場合は、実際のLPの内容と整合させる
+- 構造（property 名、@type、@context など）は変更しない
+
+### 姉妹LP
+DXO公式HPに掲載される姉妹LP:
+- https://dxo-organization-design.tebanasu-lab.com/ （自律分散組織デザイン講座）
+
+LP の方針変更時は両方の同期を確認してください。
