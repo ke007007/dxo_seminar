@@ -24,8 +24,6 @@ export const Overview: React.FC = () => {
                     label: "開催時期",
                     value: (
                         <div className="flex flex-col space-y-1">
-                            <span><span className="line-through text-brand-black/40">4月26日（日）13:00～18:00</span><span className="text-red-600 font-black ml-2 text-sm">満員御礼</span></span>
-                            <span>6月21日（日）10:00〜16:00</span>
                             <span>8月27日（木）10:00〜16:00</span>
                             <span>8月29日（土）10:00〜16:00</span>
                             <span>9月18日（金）13:00〜18:00</span>
