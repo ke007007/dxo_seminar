@@ -29,13 +29,18 @@ git push origin main
 
 ```
 App.tsx                  # ページ全体の構成（セクション順）
+data/
+  schedule.ts            # 開催日程 ★日程の変更はここだけ（非エンジニアの編集対象）
+lib/
+  schedule.ts            # 日程の検証・変換ロジック（触らない）
+日程の変更方法.md          # 非エンジニア向けの編集手順書
 components/
   Hero.tsx               # ファーストビュー（キャッチコピー）
   PainPoints.tsx         # 課題提示セクション
   Solution.tsx           # DXOが解決する内容
   ProgramDetails.tsx     # プログラム詳細
   Instructor.tsx         # 講師紹介
-  Overview.tsx           # 開催概要（日程・価格など）★よく編集する
+  Overview.tsx           # 開催概要（価格・定員など）※日程は data/schedule.ts から読む
   NextSteps.tsx          # 申込ステップ
   Closing.tsx            # クロージング
   Section.tsx            # 共通レイアウトラッパー
@@ -44,21 +49,42 @@ components/
 
 ---
 
-## 開催日程の変更方法（Overview.tsx）
+## 開催日程の変更方法（data/schedule.ts のみ）
 
-`components/Overview.tsx` の **27〜31行目** あたりに日程表示のコードがある。
+**日程は `data/schedule.ts` の1ファイルで管理している。他のファイルに日付を書かないこと。**
 
-### 日程が決まっているとき
-```tsx
-<span>4月26日（日）13:00-18:00</span>
-{/* 日程調整中に戻す場合は上の行をコメントアウトし、下の2行のコメントを外す
-<span>開催日程 調整中</span>
-<span className="text-xs font-normal text-brand-gray">※参加希望の方は申込formより登録下さい。<br />　次回日程が決定次第ご連絡させていただきます。</span>
-*/}
+```ts
+export const schedule = [
+  { date: "2026-09-18", start: "13:00", end: "18:00" },
+  { date: "2026-09-27", start: "10:00", end: "16:00" },
+];
 ```
 
-### 日程が未定のとき（調整中）
-上記を逆にする。具体的な日程行をコメントアウトし、「調整中」と注釈の2行のコメントを外す。
+ここを直すと、次の2つが自動で更新される（手動同期は不要）。
+
+- LPの「開催概要」表示（曜日は日付から自動計算）
+- `index.html` の JSON-LD `subEvent`（DXO公式HP連携用）
+
+### 仕組み
+```
+data/schedule.ts      編集する唯一のファイル（データ＋日本語コメントのみ）
+      ↓
+lib/schedule.ts       検証・変換（validate / formatJa / toSubEvents）
+      ↓
+  ┌───┴───┐
+Overview.tsx    vite.config.ts の scheduleJsonLd プラグイン
+（画面表示）     （ビルド時に index.html の "subEvent": [] へ差し込む）
+```
+
+### 覚えておくこと
+- **日程が未定のとき**は配列を空 `[]` にする。自動で「開催日程 調整中」表示に切り替わる（コメントアウト運用は廃止）
+- **満員御礼**は `full: true`、**残席表示**は `note: "残り1枠"` を行に追記する
+- `index.html` の `"subEvent": []` は**差し込み用の目印**。この文字列を変えるとビルドが停止する
+- 日付・時刻の書式が不正だと日本語エラーでビルドが停止し、Vercelが公開を中止する（誤った日程は公開されない）
+
+### オーナー以外が編集する場合
+リポジトリ直下の `日程の変更方法.md` が非エンジニア向けの手順書。
+編集用の直リンクは https://github.com/ke007007/dxo_seminar/edit/main/data/schedule.ts
 
 ---
 
@@ -95,8 +121,8 @@ DXO公式HP → Apps Script → Vercel proxy → 本LPのHTML取得 → OGP/JSON
 
 ### 編集ルール
 - `<head>` 内の OGP / JSON-LD タグを **削除しないこと**（DXO公式HPでのカード表示が壊れます）
-- 開催日程を `components/Overview.tsx` で変更した場合は、`index.html` の JSON-LD の `subEvent` 内の
-  `startDate` / `endDate` も合わせて更新すること（同期忘れに注意）
+- `subEvent` は `data/schedule.ts` からビルド時に自動生成される。`index.html` に日付を直接書かないこと
+  （書いても上書きされる）。目印の `"subEvent": []` を変更・削除するとビルドが停止する
 - `og:image` / `og:title` / `og:description` を変更する場合は、実際のLPの内容と整合させる
 - 構造（property 名、@type、@context など）は変更しない
 

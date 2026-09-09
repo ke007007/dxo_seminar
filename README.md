@@ -1,3 +1,18 @@
+# DXO 自律分散組織1day体験会 LP
+
+公開URL: https://1daydxo.tebanasu-lab.com/
+
+## 📅 開催日程を変更したい方へ
+
+**➡️ [日程の変更方法.md](日程の変更方法.md) を読んでください。**
+
+触るのは [`data/schedule.ts`](data/schedule.ts) の1ファイルだけです。プログラムの知識は不要です。
+日付を直すと、LPの表示とDXO公式HPのイベントカードの両方が自動で更新されます。
+
+編集用の直リンク: https://github.com/ke007007/dxo_seminar/edit/main/data/schedule.ts
+
+---
+
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>

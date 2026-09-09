@@ -1,6 +1,15 @@
 import React from 'react';
 import { Section } from './Section';
 import { Apple } from 'lucide-react';
+import { schedule } from '../data/schedule';
+import { formatJa, type ScheduleEntry } from '../lib/schedule';
+
+// 開催日程は data/schedule.ts から読み込む。日付・曜日をここに直接書かないこと。
+// （書式の検証とDXO公式HP用JSON-LDの生成は vite.config.ts が行う）
+const sessions = (schedule as ScheduleEntry[]).map((entry) => ({
+    ...entry,
+    text: formatJa(entry),
+}));
 
 export const Overview: React.FC = () => {
   return (
@@ -24,12 +33,22 @@ export const Overview: React.FC = () => {
                     label: "開催時期",
                     value: (
                         <div className="flex flex-col space-y-1">
-                            <span>9月18日（金）13:00〜18:00</span>
-                            <span>9月27日（日）10:00〜16:00</span>
-                            {/* 日程調整中に戻す場合は上の行をコメントアウトし、下の2行のコメントを外す
-                            <span>開催日程 調整中</span>
-                            <span className="text-xs font-normal text-brand-gray">※参加希望の方は申込formより登録下さい。<br />　次回日程が決定次第ご連絡させていただきます。</span>
-                            */}
+                            {sessions.length > 0 ? (
+                                // 日程あり（data/schedule.ts に行がある）
+                                sessions.map((s) => (
+                                    <span key={s.date}>
+                                        <span className={s.full ? "line-through text-brand-black/40" : undefined}>{s.text}</span>
+                                        {s.full && <span className="text-red-600 font-black ml-2 text-sm">満員御礼</span>}
+                                        {s.note && <span className="text-red-600 font-black ml-2 text-sm">{s.note}</span>}
+                                    </span>
+                                ))
+                            ) : (
+                                // 日程未定（data/schedule.ts を空にすると自動でこちらに切り替わる）
+                                <>
+                                    <span>開催日程 調整中</span>
+                                    <span className="text-xs font-normal text-brand-gray">※参加希望の方は申込formより登録下さい。<br />　次回日程が決定次第ご連絡させていただきます。</span>
+                                </>
+                            )}
                         </div>
                     )
                     },
