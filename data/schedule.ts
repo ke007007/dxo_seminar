@@ -47,6 +47,7 @@
 
 export const schedule = [
 
+  { date: "2026-10-17", start: "12:00", end: "17:00" },
   { date: "2026-11-15", start: "12:00", end: "17:00" },
   { date: "2026-12-13", start: "12:00", end: "17:00" },
 
