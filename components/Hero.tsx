@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
              {/* Organic Image Frame */}
              <div className="relative aspect-[4/5] bg-brand-light overflow-hidden shadow-2xl shadow-brand-black/5 transform -rotate-2 hover:rotate-0 transition-transform duration-700 ease-out" style={{ borderRadius: '255px 15px 225px 15px / 15px 225px 15px 255px' }}>
                 <img 
-                  src="https://watanabeshoten-llc.com/tmp/k/firstview_2.jpeg" 
+                  src="/images/firstview.jpg" 
                   alt="Discussion" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
                 />

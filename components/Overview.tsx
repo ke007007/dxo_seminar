@@ -131,7 +131,7 @@ export const Overview: React.FC = () => {
                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-white/40 rotate-1 shadow-sm z-10 backdrop-blur-sm border border-white/20"></div>
                    <div className="p-2 bg-white h-full w-full">
                         <img 
-                            src="https://watanabeshoten-llc.com/tmp/k/ws4.jpg" 
+                            src="/images/workshop1.jpg" 
                             alt="Workshop Scene 1" 
                             className="w-full h-full object-cover transition-all duration-700" 
                         />
@@ -143,7 +143,7 @@ export const Overview: React.FC = () => {
                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-white/40 -rotate-1 shadow-sm z-10 backdrop-blur-sm border border-white/20"></div>
                    <div className="p-2 bg-white h-full w-full">
                         <img 
-                            src="https://watanabeshoten-llc.com/tmp/k/ws3.png" 
+                            src="/images/workshop2.jpg" 
                             alt="Workshop Scene 2" 
                             className="w-full h-full object-cover transition-all duration-700" 
                         />

@@ -20,7 +20,7 @@ export const Instructor: React.FC = () => {
   const members: Member[] = [
     {
       name: "やすよ（政平 安世）",
-      image: "https://watanabeshoten-llc.com/tmp/k/member2.png",
+      image: "/members/yasuyo.jpg",
       role: "手放す経営ラボラトリー研究員 / 株式会社TKY代表取締役",
       description: "経営者の孤独と現場の痛みを、誰よりも知る伴走者。\n祖父、父、親戚の多くが経営者という家系に育ち、幼少期から経営の責任と孤独を肌で感じて過ごす。自身も25年にわたり経営の最前線に立ち続け、中小企業の役員としても、全員の同意に縛られる重圧や、人を変えようと奔走する苦悩を深く経験してきた。退任後、その葛藤を統合する中で辿り着いたのが「組織の問題は人ではなく、構造（OS）にある」というDXOの確信。\n現在は、経営者の隣に立つ伴走者として、人がいきいきと働ける自律分散型組織への移行をファシリテートしている。経営のDNAと現場の実践経験を糧に、あなたの「次の一歩」を心から応援している。"
     },
@@ -33,14 +33,14 @@ export const Instructor: React.FC = () => {
     {
       name: "たなまゆ（田中 真由）",
       hidden: true,   // ← この1行を消すと再表示されます
-      image: "https://watanabeshoten-llc.com/tmp/k/member1.png",
+      image: "/members/tanamayu.jpg",
       role: "手放す経営ラボラトリー研究員",
       description: "大企業メーカーの人事、児童福祉企業での社内統括として、16年ほど一貫して人と組織に関する仕事に携わる。多くの人に出会う中で、「その人が持つ可能性を存分に発揮できるかどうか」は本人のスキルや能力だけではなく、環境やちょっとしたきっかけが大きいと感じる。その中で、武井浩三の著書「自然経営」をきっかけに、人を変えようとしないDXOに出会う。\n実際にDXOの導入現場で組織の仕組みを変えることで、人の本来の可能性が引き出される様を目の当たりにして感動し、手放す経営ラボラトリーにジョイン。現在は、企業でのDXO導入の伴走と共に、世の中にDXOを伝える活動を行っている。"
     },
     {
       name: "けいた（高橋 啓太）",
       hidden: true,   // ← この1行を消すと再表示されます
-      image: "https://watanabeshoten-llc.com/tmp/k/member4.png",
+      image: "/members/keita.jpg",
       role: "手放す経営ラボラトリー 研究員 / 株式会社ジャムセッションズ 共同代表",
       description: "ティール組織を実践しているIT企業での事業づくりや組織づくりを経て2024年2月に独立。業種、業態、規模を問わず、様々な組織づくりの実戦経験を活かし、自律分散型組織への移行支援やコミュニティづくりを行っている。"
     }
@@ -57,7 +57,7 @@ export const Instructor: React.FC = () => {
                 {/* Organic Photo Frame */}
                 <div className="aspect-[3/4] bg-brand-light relative overflow-hidden shadow-xl transform rotate-1" style={{ borderRadius: '255px 15px 225px 15px / 15px 225px 15px 255px' }}>
                     <img 
-                    src="https://watanabeshoten-llc.com/tmp/k/nui.png" 
+                    src="/members/nui.jpg" 
                     alt="乾 真人" 
                     className="w-full h-full object-cover transition-all duration-1000 ease-in-out hover:scale-105"
                     />
@@ -78,7 +78,7 @@ export const Instructor: React.FC = () => {
                 <div className="block lg:hidden mb-12">
                      <div className="aspect-[3/4] bg-brand-light relative overflow-hidden shadow-xl transform rotate-1 max-w-[300px] mx-auto" style={{ borderRadius: '255px 15px 225px 15px / 15px 225px 15px 255px' }}>
                         <img 
-                        src="https://watanabeshoten-llc.com/tmp/k/nui.png" 
+                        src="/members/nui.jpg" 
                         alt="乾 真人" 
                         className="w-full h-full object-cover"
                         />
