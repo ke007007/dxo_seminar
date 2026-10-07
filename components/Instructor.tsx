@@ -3,7 +3,21 @@ import { Section } from './Section';
 import { Quote } from 'lucide-react';
 
 export const Instructor: React.FC = () => {
-  const members = [
+  // ==========================================================================
+  //   DXO運営チーム　メンバー一覧
+  //
+  //   hidden: true  … その人を画面に出さない（データは消さずに残す）
+  //                   後でまた出したくなったら、その1行を消すだけで戻ります。
+  // ==========================================================================
+  type Member = {
+    name: string;
+    image: string;
+    role: string;
+    description: string;
+    hidden?: boolean;
+  };
+
+  const members: Member[] = [
     {
       name: "やすよ（政平 安世）",
       image: "https://watanabeshoten-llc.com/tmp/k/member2.png",
@@ -12,9 +26,23 @@ export const Instructor: React.FC = () => {
     },
     {
       name: "ますえ（澤田 万寿江）",
-      image: "https://watanabeshoten-llc.com/tmp/k/member3.png",
+      image: "/members/masue.jpg",
       role: "手放す経営ラボラトリー研究員",
       description: "ITベンダー、教育系NPO、機械メーカーと、業種も職種も異なる組織を経験。「一人ひとりは自分の考えがあるのに、会議になると黙り込んでしまう」「助け合える関係性がある一方で、がんばる人に負担が偏ってしまう」といった場面を目にし、マネジメントを学び試行錯誤を重ねるも、マネージャーが疲弊するばかりで、個人の努力には限界があると痛感。そんな中で、人を変えずに仕組みを変えるDXOと出会う。現在はフリーランスとして、自分自身も幸せな働きかた・暮らしかたを模索しつつ、自律分散型組織を探究中。いち社員として組織の内側を見てきたからこそ、個人の想いが活きる組織づくりを、経営者とともに考えていきたい。"
+    },
+    {
+      name: "たなまゆ（田中 真由）",
+      hidden: true,   // ← この1行を消すと再表示されます
+      image: "https://watanabeshoten-llc.com/tmp/k/member1.png",
+      role: "手放す経営ラボラトリー研究員",
+      description: "大企業メーカーの人事、児童福祉企業での社内統括として、16年ほど一貫して人と組織に関する仕事に携わる。多くの人に出会う中で、「その人が持つ可能性を存分に発揮できるかどうか」は本人のスキルや能力だけではなく、環境やちょっとしたきっかけが大きいと感じる。その中で、武井浩三の著書「自然経営」をきっかけに、人を変えようとしないDXOに出会う。\n実際にDXOの導入現場で組織の仕組みを変えることで、人の本来の可能性が引き出される様を目の当たりにして感動し、手放す経営ラボラトリーにジョイン。現在は、企業でのDXO導入の伴走と共に、世の中にDXOを伝える活動を行っている。"
+    },
+    {
+      name: "けいた（高橋 啓太）",
+      hidden: true,   // ← この1行を消すと再表示されます
+      image: "https://watanabeshoten-llc.com/tmp/k/member4.png",
+      role: "手放す経営ラボラトリー 研究員 / 株式会社ジャムセッションズ 共同代表",
+      description: "ティール組織を実践しているIT企業での事業づくりや組織づくりを経て2024年2月に独立。業種、業態、規模を問わず、様々な組織づくりの実戦経験を活かし、自律分散型組織への移行支援やコミュニティづくりを行っている。"
     }
   ];
 
@@ -105,7 +133,7 @@ export const Instructor: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-                {members.map((member, index) => (
+                {members.filter((m) => !m.hidden).map((member, index) => (
                     <div key={index} className="flex flex-col sm:flex-row gap-6 items-start group">
                          {/* Image */}
                          <div className="w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 mx-auto sm:mx-0">
