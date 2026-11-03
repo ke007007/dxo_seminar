@@ -104,7 +104,8 @@ Overview.tsx    vite.config.ts の scheduleJsonLd プラグイン
 
 | ファイル | LPでの表示箇所 | 解像度 | 表示サイズ（PC） |
 |---|---|---|---|
-| `public/images/firstview.jpg` | Hero.tsx の背景＋**OGP画像** | 912×1168 | 459×565 |
+| `public/images/firstview.jpg` | Hero.tsx のトップのイラスト | 912×1168 | 459×565 |
+| `public/images/ogp.png` | **OGP画像**（SNSシェア・DXO公式HPのカード）。LPには表示しない | 1200×630 | — |
 | `public/images/workshop1.jpg` | Overview.tsx「体験会の様子」左 | 1000×555 | 399×227 |
 | `public/images/workshop2.jpg` | Overview.tsx「体験会の様子」右 | 1000×541 | 399×227 |
 | `public/members/nui.jpg` | Instructor.tsx 講師（PC用・スマホ用の2か所） | 309×319 | 443×585 |
@@ -119,8 +120,26 @@ Overview.tsx    vite.config.ts の scheduleJsonLd プラグイン
 
 - **コンポーネント（.tsx）からは相対パス**：`src="/members/yasuyo.jpg"`
 - **`index.html` の `og:image` と JSON-LD の `image` だけは絶対URL**：
-  `https://1daydxo.tebanasu-lab.com/images/firstview.jpg`
+  `https://1daydxo.tebanasu-lab.com/images/ogp.png`
   相対パスにすると **DXO公式HPのイベントカードとSNSシェアのサムネイルが壊れる**。ここは必ずフルURL。
+
+### ファビコンとOGP画像（2026-11-04 作成）
+
+| ファイル | 用途 |
+|---|---|
+| `public/favicon.svg` | ブラウザのタブ（新しいブラウザ） |
+| `public/favicon.ico` | ブラウザのタブ（古いブラウザ。16/32/48px 同梱） |
+| `public/apple-touch-icon.png` | iPhone のホーム画面（180×180。角は iOS が丸めるので角丸なし） |
+| `public/images/ogp.png` | SNSシェア・DXO公式HPのカード（1200×630） |
+
+- **ファビコン**：黄 `#FFD500` の角丸の正方形に、黒 `#1d1d1f` の3つの点が三角形につながる印
+  （トップのイラストの3人が対等につながる、という意味）。オーナーが3案から選んだ
+- **OGP画像**：LPのトップと同じ組み（白地・左に文字・右にイラスト＋手描き風の額縁）。
+  文字は Noto Sans JP の 105/40/28px、余白は 16/32/64px の刻みで実測してそろえてある
+- **OGP画像に開催日を入れない**。日程は `data/schedule.ts` で頻繁に変わるため、日付入りの画像はすぐ古くなる
+- **DXO公式HPのカードは 2:1 で切り抜く**（上下が約15pxずつ切れる）。作り直すときも文字と顔は上下40pxより内側に置く
+- 作り直すときは、HTML/CSS で組んでブラウザで 1200×630 ちょうどに書き出す（文字を画像処理で後から載せない）
+- 画像を差し替えたら、**ファイル名を変える**とSNSの古いキャッシュを避けられる（そのときは `index.html` の URL 2か所も変える）
 
 ### 最適化の方針
 
@@ -176,8 +195,8 @@ DXO公式HP → Apps Script → Vercel proxy → 本LPのHTML取得 → OGP/JSON
 - `subEvent` は `data/schedule.ts` からビルド時に自動生成される。`index.html` に日付を直接書かないこと
   （書いても上書きされる）。目印の `"subEvent": []` を変更・削除するとビルドが停止する
 - `og:image` / `og:title` / `og:description` を変更する場合は、実際のLPの内容と整合させる
-- **`og:image` と JSON-LD の `image` は必ず絶対URL**（`https://1daydxo.tebanasu-lab.com/images/firstview.jpg`）。
-  相対パスにするとDXO公式HPのカードが画像なしになる。画像の実体は `public/images/firstview.jpg`
+- **`og:image` と JSON-LD の `image` は必ず絶対URL**（`https://1daydxo.tebanasu-lab.com/images/ogp.png`）。
+  相対パスにするとDXO公式HPのカードが画像なしになる。画像の実体は `public/images/ogp.png`
 - 構造（property 名、@type、@context など）は変更しない
 
 ### 姉妹LP
